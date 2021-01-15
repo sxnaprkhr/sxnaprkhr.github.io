@@ -1,24 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap");
 
 :root {
-  --small-screen-width:90%;
-  --large-screen-width:70%;
-  --text-size:1.25rem;
+  --small-screen-width: 90%;
+  --large-screen-width: 70%;
+  --text-size: 1.25rem;
 }
 
 html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-body, header, nav, ul, li, main, article, section, footer, a {
-  margin:0;
-  padding:0;
+body,
+header,
+nav,
+ul,
+li,
+main,
+article,
+section,
+footer,
+a {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
-  color:white;
+  color: white;
 }
 
 a {
@@ -26,7 +37,7 @@ a {
 }
 
 body {
-  background-color:black;
+  background-color: black;
   font-family: Poppins, sans-serif;
 }
 
@@ -38,11 +49,13 @@ header {
   display: flex;
   justify-content: center;
   z-index: 999;
-  background-color:black;
+  background-color: black;
 }
 
-#navbar, #contact, footer {
-  width:var(--small-screen-width);
+#navbar,
+#contact,
+footer {
+  width: var(--small-screen-width);
 }
 
 #navbar ul {
@@ -51,14 +64,15 @@ header {
 }
 
 #navbar li {
-  margin:1em;
+  margin: 1em;
 }
 
-#welcome-section, #projects {
+#welcome-section,
+#projects {
   width: var(--small-screen-width);
-  min-height:100vh;
-  margin:0 auto;
-  padding:4rem 0;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 4rem 0;
 }
 
 #welcome-section {
@@ -73,15 +87,21 @@ header {
 
 #welcome-section h1 {
   font-size: calc(1.75rem + 2vw);
+  cursor: default;
+}
+
+.about-me-heading {
+  cursor: default;
 }
 
 #welcome-section .about-me-lists {
-  margin-left:1.25em;
+  margin-left: 1.25em;
   font-size: var(--text-size);
+  cursor: default;
 }
 
 .about-me-lists li:before {
-  content:"\003E \0020";
+  content: "\003E \0020";
 }
 
 .social-media {
@@ -89,12 +109,12 @@ header {
 }
 
 .social-media a {
-  font-size:2em;
-  margin-right:1em;
+  font-size: 2em;
+  margin-right: 1em;
 }
 
 .social-media a:last-child {
-  margin:0;
+  margin: 0;
 }
 
 #projects {
@@ -104,27 +124,27 @@ header {
 }
 
 #projects section {
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   flex-flow: row wrap;
   align-items: center;
 }
 
 .project-tile {
   text-align: center;
-  flex-basis:180px;
-  height:180px;
-  background-color:#32333b;
-  border-radius:0.5rem;
-  margin:1em;
+  flex-basis: 180px;
+  height: 180px;
+  background-color: #32333b;
+  border-radius: 0.5rem;
+  margin: 1em;
   transition: all 0.3s ease-in-out;
 }
 
 .project-tile:hover {
-  transform:scale(1.03);
-  background-color:white;
-  color:black;
-  box-shadow:0 10px 30px -5px rgba(255,255,255,0.2);
+  transform: scale(1.03);
+  background-color: white;
+  color: black;
+  box-shadow: 0 10px 30px -5px rgba(255, 255, 255, 0.2);
 }
 
 .project-tile a {
@@ -136,7 +156,7 @@ header {
 }
 
 .main-info {
-  font-size:1.125em;
+  font-size: 1.125em;
 }
 
 .extra-info {
@@ -144,7 +164,7 @@ header {
 }
 
 .project-tile:hover a {
-  color:black;
+  color: black;
 }
 
 #projects p {
@@ -153,46 +173,50 @@ header {
 }
 
 #projects p a {
-  margin:0 0.5em;
+  margin: 0 0.5em;
 }
 
 #contact {
-  margin:0 auto;
-  padding:2rem 0;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 #contact .social-media {
   justify-content: center;
   align-items: center;
-  padding:2rem 0;
+  padding: 2rem 0;
 }
 
 footer {
   text-align: center;
-  margin:0 auto;
-  padding-bottom:1em;
+  margin: 0 auto;
+  padding-bottom: 1em;
 }
 
 footer .heart {
-  color:red;
+  color: red;
 }
 
 .heart + a:hover {
   border-bottom: 3.5px solid white;
 }
 
-header a:hover, footer a {
-  border-bottom:2px solid white;
+header a:hover,
+footer a {
+  border-bottom: 2px solid white;
 }
 
-@media screen and (min-width:769px) {
-
+@media screen and (min-width: 769px) {
   #welcome-section h1 {
     font-size: calc(1.5rem + 2vw);
   }
 
-  #navbar, #welcome-section, #projects, #contact, footer {
-    width:var(--large-screen-width);
+  #navbar,
+  #welcome-section,
+  #projects,
+  #contact,
+  footer {
+    width: var(--large-screen-width);
   }
 
   .project-tile {
@@ -200,8 +224,13 @@ header a:hover, footer a {
     height: 250px;
   }
 
+  .project-tile:hover .main-info {
+    font-weight: 800;
+  }
+
   .project-tile:hover .extra-info {
     display: inline;
     font-style: italic;
+    font-weight: 800;
   }
 }
